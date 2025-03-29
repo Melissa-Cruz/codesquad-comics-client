@@ -2,6 +2,67 @@ function Update(){
     return (
         <div>
             Update
+            <main>
+                <div className="div-white-container">
+                    <h1>UPDATE COMIC</h1>
+
+                    <div classNameName="div-update-form-container-center">
+                        <form>
+                            <div>
+                                <label htmlFor="comic_title">Title:</label>
+                                <input type="text" name="comic_title" id="comic_title" value="title value stored in the database"/>
+                            </div> 
+                            <br/>
+
+                            <div>
+                                <label htmlFor="comic_author">Author:</label>
+                                <input type="text" name="comic_author" id="comic_author" value="author value stored in the database"/>
+                            </div> 
+                                <br/>
+
+                            <div>
+                                <label htmlFor="comic_publisher">Publisher:</label>
+                                <select name="comic_publisher" id="comic_publisher" >
+                                    <option value="" disabled selected>publisher value stored in the database</option>
+                                    <option value="boom!_box">BOOM! Box</option>
+                                    <option value="dc_comics">DC Comics</option>
+                                    <option value="harry_n_abrams">Harry N. Abrams</option>
+                                    <option value="icon_books">Icon Books</option>
+                                    <option value="image_comics">Image Comics</option>
+                                    <option value="marvel">Marvel</option>
+                                    <option value="simon_and_schuster">Simon & Schuster</option>
+                                    <option value="marvel">Marvel</option>
+                                    <option value="top_shelf_productions">Top Shelf Productions</option>
+                                    <option value="viz_media_llc">Viz Media LLC</option>
+                                </select>    
+                            </div>
+                            <br/>
+                            <div>
+                                <label htmlFor="comic_genre">Genre:</label>
+                                <input type="text" name="comic_genre" id="comic_genre" value="genre data stored in the database"/>
+                            </div> 
+                            <br/>
+                            <div>
+                                <label htmlFor="comic_length">Number of pages:</label>
+                                <input type="number" name="comic_length" id="comic_length" value="255"/>
+                            </div> 
+                            <br/>
+                            <div>
+                                <label htmlFor="comic_rating">Rating:</label>
+                                <input type="number" name="comic_rating" id="comic_rating" value="5"/>
+                            </div> 
+                            <br/>
+                            <div>
+                                <label htmlFor="comic_synopsis">Synopsis:</label>
+                                <textarea type="textarea" name="comic_synopsis" id="comic_synopsis" placeholder="Synopsis">synopsis value stored in the database</textarea>
+                            </div> 
+                            <div classNameName="div-white-container-form-button">
+                                <input type="submit" value="Submit"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </main>
         </div>
     )
 };

@@ -85,7 +85,7 @@ function Home(){
                         </div>
                         <div>
                             <figure>
-                                <a href="thewalkingdead.html" target="_self"><img className="comic-book-cover" src="public/images/the-walking-dead.jpg" alt="comic book cover of zombies and a broken picture frame of a family"/></a>
+                                <a href="#" target="_self"><img className="comic-book-cover" src="public/images/the-walking-dead.jpg" alt="comic book cover of zombies and a broken picture frame of a family"/></a>
                                 <figcaption className="multiline"><cite>The Walking Dead, Vol.I: Days Gone Bye</cite> 
                                 by Robert Kirkman
                                 4 stars
@@ -105,8 +105,8 @@ function Home(){
                         </div>
                         <div>
                             <figure>
-                                <a href="#" target="_self"><img className="comic-book-cover" src="public/images/batman.jpg" alt="comic book cover of Batman outline and lightning"></a>
-                                <figcaption className="multiline"/><cite>Batman:The Dark Knight Returns</cite> 
+                                <a href="#" target="_self"><img className="comic-book-cover" src="public/images/batman.jpg" alt="comic book cover of Batman outline and lightning"/></a>
+                                <figcaption className="multiline"><cite>Batman:The Dark Knight Returns</cite> 
                                 by Frank Miller
                                 3 stars
                                 </figcaption>
