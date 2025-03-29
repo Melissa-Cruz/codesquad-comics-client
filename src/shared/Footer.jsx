@@ -1,7 +1,7 @@
 function Footer(){
     return (
         <div>
-            Footer
+            
             <footer>
 
                 <div>
@@ -41,7 +41,7 @@ function Footer(){
                 <div>
                     <h3>A PRODUCT OF</h3>
                     <a href="#" target="_blank">
-                        <img src="public/images/CodeSquad-logo-a.png" alt="CodeSquad logo followed by CodeSquad.org"/>
+                        <img src="./images/CodeSquad-logo.jpg" alt="CodeSquad logo followed by CodeSquad.org"/>
                     </a> 
                 </div>
             </footer>

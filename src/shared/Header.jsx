@@ -1,11 +1,11 @@
 function Header(){
     return(
         <div>
-            Header
+            
             <header>
                 <div className="codesquad-comics-header-logo">
                     <a href="#" target="_self">
-                        <img className="nav-comic-icon" src="public/images/CodeSquad-Comics-logo.png" alt="four books followed by the title CodeSquad Comics"/>
+                        <img className="nav-comic-icon" src="./images/CodeSquad-Comics-logo.jpg" alt="four books followed by the title CodeSquad Comics"/>
                     </a> 
                 </div>
 
