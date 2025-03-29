@@ -1,7 +1,7 @@
 function Update(){
     return (
         <div>
-            Update
+            
             <main>
                 <div className="div-white-container">
                     <h1>UPDATE COMIC</h1>

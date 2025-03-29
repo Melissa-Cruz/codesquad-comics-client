@@ -1,7 +1,7 @@
 function Create(){
     return (
         <div>
-        Create
+        
             <main>
                 <div className="div-white-container">   
                     <h1>CREATE NEW COMIC</h1>

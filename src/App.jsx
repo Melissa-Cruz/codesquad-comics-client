@@ -3,6 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import About from './components/About'
+import Admin from './components/Admin'
+import Create from './components/Create'
+import Home from './components/Home'
+import Login from './components/Login'
+import Signup from './components/Signup'
+import Update from './components/Update'
+import Header from './shared/Header'
+import Footer from './shared/Footer'
+
 
 
 
@@ -10,8 +20,43 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+
   return (
     <>
+      <div className='App'>
+        <Header/>
+        <About/>
+        <Footer/>
+
+        <Header/>
+        <Admin/>
+        <Footer/>
+
+        <Header/>
+        <Create/>
+        <Footer/>
+
+        <Header/>
+        <Home/>
+        <Footer/>
+
+        <Header/>
+        <Login/>
+        <Footer/>
+
+        <Header/>
+        <Update/>
+        <Footer/>
+
+        <Header/>
+        <Signup/>
+        <Footer/>
+
+
+
+
+      </div>
+
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

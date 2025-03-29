@@ -1,7 +1,7 @@
 function About() {
     return (
         <div>
-            About
+            
             <main>
                 <div className="div-white-container">
                     <div>

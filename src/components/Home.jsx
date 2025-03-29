@@ -1,7 +1,9 @@
+import booksData from "../data/books";
+
 function Home(){
     return (
         <div>
-            Home
+            
             <main>
                 <div className="div-white-container">
                     <h1>CODESQUAD COMICS</h1>
@@ -10,8 +12,33 @@ function Home(){
 
                 <div className="div-white-container">
                     <h2>COMPLETE COMIC COLLECTION</h2>
+
                     <div className="comic-book-collection-list">
-                        <div>
+                        {booksData.map((book)=> (
+                            <div>
+                                <figure>
+                                    <div>
+                                        <a href="#" target="_self"><img className="comic-book-cover" 
+                                        src= {`./images/${book.imageUrl}`} alt="blank for now"/>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <figcaption className="multiline">
+                                            <div><cite>{book.title}</cite></div>
+                                            <div>by {book.author}</div>
+                                            <div>{book.rating} stars</div>
+                                            <div><a href="#" target="_self">Details</a></div>
+                                        </figcaption>
+                                    </div>
+                                    
+                                </figure>
+                            </div>   
+                        ))
+                        }
+                       
+
+
+                        {/* <div>
                             <figure>
                                 <a href="#" target="_self"><img className="comic-book-cover" src="public/images/fun-home.jpg" alt="comic book cover for Fun Home has a picture of three young kids and a teen"/>
                                 </a>
@@ -132,7 +159,7 @@ function Home(){
                                 </figcaption>
                                 <a href="#" target="_self">Details</a>
                             </figure>
-                        </div>
+                        </div> */}
                     </div>
                     <button className="button-space-formatting">DISPLAY MORE</button>       
                 </div>

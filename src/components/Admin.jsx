@@ -1,7 +1,7 @@
 function Admin() {
     return (
         <div> 
-            Admin
+            
             <main>
                 
                 <div className="div-white-container">
