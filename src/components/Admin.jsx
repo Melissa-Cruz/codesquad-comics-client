@@ -1,3 +1,5 @@
+import booksData from "../data/books";
+
 function Admin() {
     return (
         <div> 
@@ -19,7 +21,19 @@ function Admin() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                {
+                                    booksData.map((book)=>(
+                                        <tr>
+                                            <td>{book.title}</td>
+                                            <td><button>EDIT</button></td>
+                                            <td><button>DELETE</button></td>
+                                        </tr>                                        
+
+                                    ))
+                                }
+
+                                
+                                {/* <tr>
                                     <td>Batman: The Dark Knight Returns</td>
                                     <td><button>EDIT</button></td>
                                     <td><button>DELETE</button></td>
@@ -78,7 +92,7 @@ function Admin() {
                                     <td>Watchmen</td>
                                     <td><button>EDIT</button></td>
                                     <td><button>DELETE</button></td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                     </div>

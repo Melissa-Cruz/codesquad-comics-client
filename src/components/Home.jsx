@@ -19,7 +19,7 @@ function Home(){
                                 <figure>
                                     <div>
                                         <a href="#" target="_self"><img className="comic-book-cover" 
-                                        src= {`./images/${book.imageUrl}`} alt="blank for now"/>
+                                        src= {`./images/${book.imageUrl}`} alt={book.title}/>
                                         </a>
                                     </div>
                                     <div>
