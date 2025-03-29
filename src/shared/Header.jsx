@@ -1,6 +1,7 @@
 function Header(){
     return(
         <div>
+            Header
             <header>
                 <div className="codesquad-comics-header-logo">
                     <a href="#" target="_self">
@@ -17,7 +18,7 @@ function Header(){
                     <i className="fa-solid fa-bars"></i>
                 </div>
             </header>
-            Header
+            
         </div>
     )
 };

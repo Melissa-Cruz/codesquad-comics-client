@@ -1,6 +1,7 @@
 function Footer(){
     return (
         <div>
+            Footer
             <footer>
 
                 <div>
@@ -44,7 +45,7 @@ function Footer(){
                     </a> 
                 </div>
             </footer>
-            Footer
+            
         </div>
     )
 }; 
