@@ -4,7 +4,7 @@ function Update(){
             <div className="div-white-container">
                 <h1>UPDATE COMIC</h1>
 
-                <div classNameName="div-update-form-container-center">
+                <div className="div-update-form-container-center">
                     <form>
                         <div>
                             <label htmlFor="comic_title">Title:</label>
