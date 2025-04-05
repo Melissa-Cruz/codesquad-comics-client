@@ -1,5 +1,5 @@
 import './App.css'
-
+import { useState } from 'react'
 import About from './components/About'
 import Admin from './components/Admin'
 import Create from './components/Create'
@@ -16,6 +16,10 @@ import Footer from './shared/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [user, setUser] = useState(
+    localStorage.user
+  )
+  console.log(localStorage.user)
 
 
   return (
