@@ -1,36 +1,34 @@
 import booksData from "../data/books";
 
 function Admin() {
-    return (
-        <div> 
-            
-            <main>
+    return (            
+        <main>
                 
-                <div className="div-white-container">
-                    <h1>ADMIN PAGE</h1>
-                    <div className="div-button-container">
-                        <button className="button-space-formatting">ADD NEW COMIC</button></div>
+            <div className="div-white-container">
+                <h1>ADMIN PAGE</h1>
+                <div className="div-button-container">
+                    <button className="button-space-formatting">ADD NEW COMIC</button></div>
                     
-                    <div className="admin-table-container">
-                        <table className="comic-table-formatting">
-                            <thead>
-                                <tr>
-                                    <th>COMIC TITLE</th>
-                                    <th>EDIT</th>
-                                    <th>DELETE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    booksData.map((book)=>(
-                                        <tr>
-                                            <td>{book.title}</td>
-                                            <td><button>EDIT</button></td>
-                                            <td><button>DELETE</button></td>
-                                        </tr>                                        
+                <div className="admin-table-container">
+                    <table className="comic-table-formatting">
+                        <thead>
+                            <tr>
+                                <th>COMIC TITLE</th>
+                                <th>EDIT</th>
+                                <th>DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                booksData.map((book)=>(
+                                    <tr>
+                                        <td>{book.title}</td>
+                                        <td><button>EDIT</button></td>
+                                        <td><button>DELETE</button></td>
+                                    </tr>                                        
 
-                                    ))
-                                }
+                                ))
+                            }
 
                                 
                                 {/* <tr>
@@ -93,13 +91,11 @@ function Admin() {
                                     <td><button>EDIT</button></td>
                                     <td><button>DELETE</button></td>
                                 </tr> */}
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
-            </main>
-           
-        </div>
+            </div>
+        </main>
     )
 };  
 
