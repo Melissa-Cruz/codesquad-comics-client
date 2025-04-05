@@ -2,7 +2,7 @@ function Signup(){
     return (         
         <main>
             <div className="div-white-container">
-                <h1>LOGIN</h1>
+                <h1>Sign Up</h1>
                 <div className="div-form-container-center">
                     <form>
                         <div>
