@@ -1,4 +1,5 @@
 import './App.css'
+import React from "react"; // it's not in the directions but it's in the demo
 import { useState } from 'react'
 import About from './components/About'
 import Admin from './components/Admin'
@@ -9,13 +10,16 @@ import Signup from './components/Signup'
 import Update from './components/Update'
 import Header from './shared/Header'
 import Footer from './shared/Footer'
+import { setuid } from 'process';
 
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+
+  // The initial value will be retrieved from localStorage a variable named "user" OR an empty object.
   const [user, setUser] = useState(
     localStorage.user
   )
@@ -25,7 +29,8 @@ function App() {
   return (
     <>
       <div className='App'>
-        <Header/>
+      {/* Pass down the user and setter function to the following components as a prop: Header, Login, Signup,  */}
+        <Header({user,setUser})/>
         <About/>
         <Admin/>
         <Create/>
