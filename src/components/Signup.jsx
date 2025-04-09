@@ -1,4 +1,4 @@
-function Signup(){
+function Signup({user, setUser}){
     return (         
         <main>
             <div className="div-white-container">
