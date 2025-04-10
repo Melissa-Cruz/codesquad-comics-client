@@ -1,6 +1,29 @@
+import { useState, useEffect } from "react";
 import booksData from "../data/books";
 
 function Home(){
+    // Create a state using useState to hold data for "books".
+
+    const [books, setBooks] = useState("")
+
+
+    // Create a useEffect function  <- i copied from w3 schools? and this runs on initial render. Does this need to change to  books and a change occuring in that? I think i'm concused on what we are rendering in the DOM based on w3 schools example?
+    const [count, setCount] = useState(0);
+
+    useEffect(() => { 
+        setTimeout(() => {
+            setCount((count) => count + 1);
+        }, 1000);
+      }, []); // <- add empty brackets here
+
+    //In the callback section, use the setter function for books, and set it to booksData imported from the book.js file
+
+  // does this needd to take an event input since it's reading data?
+    const handleBooksChange = () =>{
+        setBooks(booksData);
+    }
+
+
     return (          
         <main>
             <div className="div-white-container">
@@ -12,7 +35,7 @@ function Home(){
                 <h2>COMPLETE COMIC COLLECTION</h2>
 
                 <div className="comic-book-collection-list">
-                    {booksData.map((book)=> (
+                    {books.map((book)=> (
                         <div>
                             <figure>
                                 <div>

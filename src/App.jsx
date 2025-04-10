@@ -10,7 +10,7 @@ import Signup from './components/Signup'
 import Update from './components/Update'
 import Header from './shared/Header'
 import Footer from './shared/Footer'
-import { setuid } from 'process';
+import { setuid } from 'process'
 
 
 
@@ -23,21 +23,28 @@ function App() {
   const [user, setUser] = useState(
     localStorage.user
   )
-  console.log(localStorage.user)
+  // console.log(localStorage.user)
 
+
+
+
+
+
+
+  
 
   return (
     <>
       <div className='App'>
-      {/* Pass down the user and setter function to the following components as a prop: Header, Login, Signup,  */}
+      {/* Pass down the user and setter function to the following components as a prop: Header, Login, Signup, <- pretty sure I'm doing this wrong  */}
         <Header({user,setUser})/>
         <About/>
         <Admin/>
         <Create/>
         <Home/>
-        <Login/>
+        <Login({user,setUser})/>
         <Update/>
-        <Signup/>
+        <Signup({user,setUser})/>
         <Footer/>
       </div>
     </>
