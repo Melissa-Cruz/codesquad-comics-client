@@ -1,4 +1,15 @@
 function Create(){
+    // Build an arrow function to handle the create form submissions. There will be one parameter of "event" (or "e" for short). 
+    const handleFormSubmission =(e)=>{
+        // Inside the function, use the method to prevent the default behavior of a form submission. <- I do not recall
+        console.log("this handleFormSubmission ran"); 
+
+        // Print the values of each input element, one at a time, to the console, so that we can confirm the values we are submitting are indeed recorded in the form.
+        console.log()
+
+
+    }
+
     return (        
         <main>
             <div className="div-white-container">   
