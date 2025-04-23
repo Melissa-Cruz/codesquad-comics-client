@@ -1,14 +1,13 @@
+import React, {useEffect, useState} from "react";
 import booksData from "../data/books";
 
 function Admin() {
-    const [books, setBooks] = useState("")
+    const [books, setBooks] = useState([])
     {/* // Create a useEffect function  <- i copied from w3 schools? and this runs on initial render. Does this need to change to  books and a change occuring in that? I think i'm confused on what we are rendering in the DOM based on w3 schools example? */}
-    const [count, setCount] = useState(0);
             
-    useEffect(() => { 
-        setTimeout(() => {
-            setCount((count) => count + 1);
-            }, 1000)
+    useEffect(() => {
+        setBooks(booksData); 
+
     }, []); 
                 // I also don't understand the note on the key attribute
 
@@ -31,9 +30,8 @@ function Admin() {
                             </tr>
                         </thead>
                         <tbody>
-                            {
-                                books.map((book)=>(
-                                    <tr>
+                            {books.map((book)=>(
+                                    <tr key={book._id}>
                                         <td>{book.title}</td>
                                         <td><button>EDIT</button></td>
                                         <td><button>DELETE</button></td>

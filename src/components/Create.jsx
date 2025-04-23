@@ -7,7 +7,7 @@ function Create(){
         // Print the values of each input element, one at a time, to the console, so that we can confirm the values we are submitting are indeed recorded in the form.
         // console.log()
 
-        console.log(e.target._comic_title_.value);
+        // console.log(e.target._comic_title_.value);
 
 
     }

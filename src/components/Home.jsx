@@ -1,14 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import booksData from "../data/books";
 
 function Home(){
     // Create a state using useState to hold data for "books".
 
-    const [books, setBooks] = useState("")
+    const [books, setBooks] = useState([]);
 
 
-    // Create a useEffect function  <- i copied from w3 schools? and this runs on initial render. Does this need to change to  books and a change occuring in that? I think i'm concused on what we are rendering in the DOM based on w3 schools example?
-    const [count, setCount] = useState(0);
 
     useEffect(() => { 
 
