@@ -4,22 +4,24 @@ import booksData from "../data/books";
 function Home(){
     // Create a state using useState to hold data for "books".
 
+
+//books belong to the Home component as a state 
     const [books, setBooks] = useState([]);
 
 
-
+//useEffect gets the data outside of react 
     useEffect(() => { 
 
         setBooks(booksData);
 
-      }, []); // <- add empty brackets here
+      }, []); // <- add empty brackets here ( run the useEffect only once in the beginning, this is the dependency array ( think about this as a trigger or control mechanism, the brackets is setting the condition of how this is run, empty brackets is an indicator to run once and then never again ))
 
     //In the callback section, use the setter function for books, and set it to booksData imported from the book.js file
 
   // does this needd to take an event input since it's reading data?
-    const handleBooksChange = () =>{
-        setBooks(booksData);
-    }
+    // const handleBooksChange = () =>{
+    //     setBooks(booksData);
+    // }
 
 
     return (          
