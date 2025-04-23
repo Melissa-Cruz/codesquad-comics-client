@@ -11,9 +11,9 @@ function Home(){
     const [count, setCount] = useState(0);
 
     useEffect(() => { 
-        setTimeout(() => {
-            setCount((count) => count + 1);
-        }, 1000);
+
+        setBooks(booksData);
+
       }, []); // <- add empty brackets here
 
     //In the callback section, use the setter function for books, and set it to booksData imported from the book.js file
@@ -36,7 +36,7 @@ function Home(){
 
                 <div className="comic-book-collection-list">
                     {books.map((book)=> (
-                        <div>
+                        <div key={book._id}>
                             <figure>
                                 <div>
                                     <a href="#" target="_self"><img className="comic-book-cover" 

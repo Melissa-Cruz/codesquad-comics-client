@@ -5,7 +5,9 @@ function Create(){
         console.log("this handleFormSubmission ran"); 
 
         // Print the values of each input element, one at a time, to the console, so that we can confirm the values we are submitting are indeed recorded in the form.
-        console.log()
+        // console.log()
+
+        console.log(e.target._comic_title_.value);
 
 
     }
@@ -15,7 +17,7 @@ function Create(){
             <div className="div-white-container">   
                 <h1>CREATE NEW COMIC</h1>
                 <div className="div-form-container-center">
-                    <form>
+                    <form onSubmit={handleFormSubmission}>
                         <div>
                             <label htmlFor="comic_title">Title:</label>
                             <input type="text" name="comic_title" id="comic_title" placeholder="Title"/>

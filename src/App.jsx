@@ -21,7 +21,7 @@ function App() {
 
   // The initial value will be retrieved from localStorage a variable named "user" OR an empty object.
   const [user, setUser] = useState(
-    localStorage.user
+    localStorage.getItem("user") || {}
   )
   // console.log(localStorage.user)
 
@@ -37,14 +37,14 @@ function App() {
     <>
       <div className='App'>
       {/* Pass down the user and setter function to the following components as a prop: Header, Login, Signup, <- pretty sure I'm doing this wrong  */}
-        <Header({user,setUser})/>
+        <Header user={user} setUser={setUser}/>
         <About/>
         <Admin/>
         <Create/>
         <Home/>
-        <Login({user,setUser})/>
+        <Login user={user} setUser={setUser}/>
         <Update/>
-        <Signup({user,setUser})/>
+        <Signup user={user} setUser={setUser}/>
         <Footer/>
       </div>
     </>
