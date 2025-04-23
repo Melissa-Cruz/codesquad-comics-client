@@ -20,18 +20,20 @@ function Create(){
                     <form onSubmit={handleFormSubmission}>
                         <div>
                             <label htmlFor="comic_title">Title:</label>
-                            <input type="text" name="comic_title" id="comic_title" placeholder="Title"/>
+                            <input type="text" name="comic_title" id="comic_title" placeholder="Title"
+                            required/>
                         </div> 
                         <br/>
                         <div>
                             <label htmlFor="comic_author">Author:</label>
-                            <input type="text" name="comic_author" id="comic_author" placeholder="Author"/>
+                            <input type="text" name="comic_author" id="comic_author" placeholder="Author"
+                            required/>
                         </div> 
                         <br/>
 
                         <div>
                             <label htmlFor="comic_publisher">Publisher:</label>
-                            <select name="comic_publisher" id="comic_publisher" >
+                            <select name="comic_publisher" id="comic_publisher" required >
                                 <option value="" disabled selected>Select</option>
                                 <option value="boom!_box">BOOM! Box</option>
                                 <option value="dc_comics">DC Comics</option>
@@ -49,25 +51,25 @@ function Create(){
 
                         <div>
                             <label htmlFor="comic_genre">Genre:</label>
-                            <input type="text" name="comic_genre" id="comic_genre" placeholder="Genre"/>
+                            <input type="text" name="comic_genre" id="comic_genre" placeholder="Genre" required/>
                         </div>
                         <br/>
 
                         <div>
                             <label htmlFor="comic_length">Number of pages:</label>
-                            <input type="number" name="comic_length" id="comic_length" placeholder="Number of Pages"/>
+                            <input type="number" name="comic_length" id="comic_length" placeholder="Number of Pages" required/>
                         </div>
                         <br/>
 
                         <div>
                             <label htmlFor="comic_rating">Rating:</label>
-                            <input type="number" name="comic_rating" id="comic_rating" placeholder="number (0-5)"/>
+                            <input type="number" name="comic_rating" id="comic_rating" placeholder="number (0-5)" required/>
                         </div> 
                         <br/>
 
                         <div className="synopsis-input-formatting">
                             <label htmlFor="comic_synopsis">Synopsis:</label>
-                            <textarea type="textarea" name="comic_synopsis" id="comic_synopsis" placeholder="Synopsis"></textarea>
+                            <textarea type="textarea" name="comic_synopsis" id="comic_synopsis" placeholder="Synopsis" required></textarea>
                         </div>
                             
                         <div className="div-white-container-form-button">
