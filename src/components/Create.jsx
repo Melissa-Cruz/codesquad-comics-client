@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Create() {
-    const navigate = useNavigate();
-
-
-
+  const navigate = useNavigate();
 
   // Build an arrow function to handle the create form submissions. There will be one parameter of "event" (or "e" for short).
   const handleFormSubmission = (e) => {
@@ -19,53 +14,47 @@ function Create() {
 
     console.log("this handleFormSubmission ran");
     const body = {
-        // not sure if how I named the variables matter
-    //   comic_title: e.target.comic_title.value,
-    //   comic_author: e.target.comic_author.value,
-    //   comic_publisher: e.target.comic_publisher.value,
-    //   comic_genre: e.target.comic_genre.value,
-    //   comic_length: e.target.comic_length.value,
-    //   comic_rating: e.target.comic_rating.value,
-    //   comic_synopsis: e.target.comic_synopsis.value
 
-      title: e.target.comic_title.value,
-      author: e.target.comic_author.value,
-      publisher: e.target.comic_publisher.value,
-      genre: e.target.comic_genre.value,
-      length: e.target.comic_length.value,
-      rating: e.target.comic_rating.value,
-      synopsis: e.target.comic_synopsis.value,
+      title: e.target.title.value,
+      author: e.target.author.value,
+      publisher: e.target.publisher.value,
+      genre: e.target.genre.value,
+      length: e.target.pages.value,
+      rating: e.target.rating.value,
+      synopsis: e.target.synopsis.value,
     };
 
     // Print the values of each input element, one at a time, to the console, so that we can confirm the values we are submitting are indeed recorded in the form.
     // console.log()
 
-    console.log(e.target.comic_title.value);
-    console.log(e.target.comic_author.value);
-    console.log(e.target.comic_publisher.value);
-    console.log(e.target.comic_genre.value);
-    console.log(e.target.comic_length.value);
-    console.log(e.target.comic_rating.value);
-    console.log(e.target.comic_synopsis.value);
+    console.log(e.target.title.value);
+    console.log(e.target.author.value);
+    console.log(e.target.publisher.value);
+    console.log(e.target.genre.value);
+    console.log(e.target.pages.value);
+    console.log(e.target.rating.value);
+    console.log(e.target.synopsis.value);
 
-    fetch(
-      `${url}`,{
-        method: "POST",
-        headers:{
-            "Content-Type":"application/json" 
-        },
-        body: JSON.stringify(body) 
+    fetch(`${url}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
     })
-        .then((response) => response.json())
-        .then((result) => console.log(result))
-        .catch((error) => {
-          console.log(error);
-          setErrorMessage(error.message)
-          console.log(error.message);
-          
-        });
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        navigate(`/admin`)
+
+    
+    })
+      .catch((error) => {
+        console.log(error);
+        setErrorMessage(error.message);
+        console.log(error.message);
+      });
   };
-  
 
   return (
     <main>
@@ -74,22 +63,22 @@ function Create() {
         <div className="div-form-container-center">
           <form onSubmit={handleFormSubmission}>
             <div>
-              <label htmlFor="comic_title">Title:</label>
+              <label htmlFor="title">Title:</label>
               <input
                 type="text"
-                name="comic_title"
-                id="comic_title"
+                name="title"
+                id="title"
                 placeholder="Title"
                 required
               />
             </div>
             <br />
             <div>
-              <label htmlFor="comic_author">Author:</label>
+              <label htmlFor="author">Author:</label>
               <input
                 type="text"
-                name="comic_author"
-                id="comic_author"
+                name="author"
+                id="author"
                 placeholder="Author"
                 required
               />
@@ -97,8 +86,8 @@ function Create() {
             <br />
 
             <div>
-              <label htmlFor="comic_publisher">Publisher:</label>
-              <select name="comic_publisher" id="comic_publisher" required>
+              <label htmlFor="publisher">Publisher:</label>
+              <select name="publisher" id="publisher" required>
                 <option value="" disabled selected>
                   Select
                 </option>
@@ -119,11 +108,11 @@ function Create() {
             <br />
 
             <div>
-              <label htmlFor="comic_genre">Genre:</label>
+              <label htmlFor="genre">Genre:</label>
               <input
                 type="text"
-                name="comic_genre"
-                id="comic_genre"
+                name="genre"
+                id="genre"
                 placeholder="Genre"
                 required
               />
@@ -131,11 +120,11 @@ function Create() {
             <br />
 
             <div>
-              <label htmlFor="comic_length">Number of pages:</label>
+              <label htmlFor="pages">Number of pages:</label>
               <input
                 type="number"
-                name="comic_length"
-                id="comic_length"
+                name="pages"
+                id="pages"
                 placeholder="Number of Pages"
                 required
               />
@@ -143,11 +132,11 @@ function Create() {
             <br />
 
             <div>
-              <label htmlFor="comic_rating">Rating:</label>
+              <label htmlFor="rating">Rating:</label>
               <input
                 type="number"
-                name="comic_rating"
-                id="comic_rating"
+                name="rating"
+                id="rating"
                 placeholder="number (0-5)"
                 required
               />
@@ -155,11 +144,11 @@ function Create() {
             <br />
 
             <div className="synopsis-input-formatting">
-              <label htmlFor="comic_synopsis">Synopsis:</label>
+              <label htmlFor="synopsis">Synopsis:</label>
               <textarea
                 type="textarea"
-                name="comic_synopsis"
-                id="comic_synopsis"
+                name="synopsis"
+                id="synopsis"
                 placeholder="Synopsis"
                 required
               ></textarea>
