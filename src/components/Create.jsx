@@ -21,7 +21,7 @@ function Create() {
       genre: e.target.genre.value,
       length: e.target.pages.value,
       rating: e.target.rating.value,
-      synopsis: e.target.synopsis.value,
+      synopsis: e.target.synopsis.value
     };
 
     // Print the values of each input element, one at a time, to the console, so that we can confirm the values we are submitting are indeed recorded in the form.
