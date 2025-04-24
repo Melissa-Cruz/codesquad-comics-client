@@ -11,7 +11,7 @@ import Update from "./components/Update";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
 import { Routes, Route } from "react-router-dom";
-// import { setuid } from 'process'
+// import { setuid } from 'process';
 
 function App() {
   // const [count, setCount] = useState(0)

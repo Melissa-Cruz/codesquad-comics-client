@@ -1,6 +1,15 @@
-function Create() {
-  // Build an arrow function to handle the create form submissions. There will be one parameter of "event" (or "e" for short).
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+
+
+function Create() {
+    const navigate = useNavigate();
+
+
+
+
+  // Build an arrow function to handle the create form submissions. There will be one parameter of "event" (or "e" for short).
   const handleFormSubmission = (e) => {
     e.preventDefault();
     console.log("submitted");
@@ -10,6 +19,15 @@ function Create() {
 
     console.log("this handleFormSubmission ran");
     const body = {
+        // not sure if how I named the variables matter
+    //   comic_title: e.target.comic_title.value,
+    //   comic_author: e.target.comic_author.value,
+    //   comic_publisher: e.target.comic_publisher.value,
+    //   comic_genre: e.target.comic_genre.value,
+    //   comic_length: e.target.comic_length.value,
+    //   comic_rating: e.target.comic_rating.value,
+    //   comic_synopsis: e.target.comic_synopsis.value
+
       title: e.target.comic_title.value,
       author: e.target.comic_author.value,
       publisher: e.target.comic_publisher.value,
@@ -31,19 +49,23 @@ function Create() {
     console.log(e.target.comic_synopsis.value);
 
     fetch(
-      `${url}`,
-      { method: "POST", body: JSON.stringify(body) }
+      `${url}`,{
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json" 
+        },
+        body: JSON.stringify(body) 
+    })
         .then((response) => response.json())
         .then((result) => console.log(result))
         .catch((error) => {
           console.log(error);
-          setErrorMessage(error.message);
-        })
-
-    );
-    console.log(error.message);
+          setErrorMessage(error.message)
+          console.log(error.message);
+          
+        });
   };
-  c
+  
 
   return (
     <main>
