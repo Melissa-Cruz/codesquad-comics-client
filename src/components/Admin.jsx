@@ -1,47 +1,72 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import booksData from "../data/books";
 
 function Admin() {
-    const [books, setBooks] = useState([])
-    {/* // Create a useEffect function  <- i copied from w3 schools? and this runs on initial render. Does this need to change to  books and a change occuring in that? I think i'm confused on what we are rendering in the DOM based on w3 schools example? */}
-            
-    useEffect(() => {
-        setBooks(booksData); 
+  const [books, setBooks] = useState([]);
+  {
+    /* // Create a useEffect function  */
+  }
 
-    }, []); 
-                // I also don't understand the note on the key attribute
+  const url =
+    "https://course-project-codesquad-comics-server.onrender.com/api/books";
 
-    return (            
-        <main>
+  useEffect(() => {
+    fetch(`${url}`)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        setBooks(result.data.books);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
-                
-            <div className="div-white-container">
-                <h1>ADMIN PAGE</h1>
-                <div className="div-button-container">
-                    <button className="button-space-formatting">ADD NEW COMIC</button></div>
-                    
-                <div className="admin-table-container">
-                    <table className="comic-table-formatting">
-                        <thead>
-                            <tr>
-                                <th>COMIC TITLE</th>
-                                <th>EDIT</th>
-                                <th>DELETE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {books.map((book)=>(
-                                    <tr key={book._id}>
-                                        <td>{book.title}</td>
-                                        <td><button>EDIT</button></td>
-                                        <td><button>DELETE</button></td>
-                                    </tr>                                        
+  const deleteUrl =
+    "https://course-project-codesquad-comics-server.onrender.com/api/books/delete/";
+  // "https://course-project-codesquad-comics-server.onrender.com/api/books/delete/${bookId}";
+  const handleDeleteBook = (bookId) => {
+    // console.log(JSON.str)
 
-                                ))
-                            }
+    console.log(`${deleteUrl}${bookId}`);
+    fetch(`${deleteUrl}${bookId}`, { method: "DELETE" })
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+  };
 
-                                
-                                {/* <tr>
+  return (
+    <main>
+      <div className="div-white-container">
+        <h1>ADMIN PAGE</h1>
+        <div className="div-button-container">
+          <button className="button-space-formatting">ADD NEW COMIC</button>
+        </div>
+
+        <div className="admin-table-container">
+          <table className="comic-table-formatting">
+            <thead>
+              <tr>
+                <th>COMIC TITLE</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {books.map((book) => (
+                <tr key={book._id}>
+                  <td>{book.title}</td>
+                  <td>
+                    <button><a href="./Update">EDIT</a></button>
+                  </td>
+                  {/* do the format beloow */}
+                  <td>
+                    <button onClick={() => handleDeleteBook(book._id)}>
+                      DELETE
+                    </button>
+                  </td>
+                </tr>
+              ))}
+
+              {/* <tr>
                                     <td>Batman: The Dark Knight Returns</td>
                                     <td><button>EDIT</button></td>
                                     <td><button>DELETE</button></td>
@@ -101,12 +126,12 @@ function Admin() {
                                     <td><button>EDIT</button></td>
                                     <td><button>DELETE</button></td>
                                 </tr> */}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </main>
-    )
-};  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  );
+}
 
 export default Admin;
