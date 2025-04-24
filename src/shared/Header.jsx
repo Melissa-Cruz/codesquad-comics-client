@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 function Header({user, setUser}){
 
     const navigate = useNavigate();
-    const handleLoggingOut = (e) =>  {
+    const handleLogout = (e) =>  {
 
     }
 
     const url = "https://course-project-codesquad-comics-server.onrender.com/logout";
 
-    fetch(`${url}`{
+    fetch(`${url}`,{
         method:"POST",
         headers: {
             "Content-Type":"application/json",
@@ -41,10 +41,19 @@ function Header({user, setUser}){
                 </a> 
             </div>
 
+{/* //Change "to" attributes to "/" for the image and Home links, "/about" for about link, "/admin" for admin link and "/login" for login link. Leave the href for logout link as "#"  <------ This lead to an error for me*/ }
+
+
             <nav className="navbar-container">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT</a>
-                <a href="#">LOGIN</a>
+                <Link to="/home">HOME</Link>
+                <Link to="/about">ABOUT</Link>
+                {user.username ? ( 
+                    <Link to="/admin">ADMIN</Link>,
+                    <a href = "#" onClick={handleLogout}>LOGOUT</a>
+                ) : (
+                    <Link to="/Login">LOGIN</Link>
+                )
+                 }
             </nav>  
             <div className="hamburger-container">
                 <i className="fa-solid fa-bars"></i>
