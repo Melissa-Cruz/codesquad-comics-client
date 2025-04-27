@@ -26,7 +26,7 @@ function App() {
         {/* Pass down the user and setter function to the following components as a prop: Header, Login, Signup, <- pretty sure I'm doing this wrong  */}
         <Header user={user} setUser={setUser} />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/create" element={<Create />} />

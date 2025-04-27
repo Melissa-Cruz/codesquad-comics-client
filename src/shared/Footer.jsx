@@ -15,13 +15,15 @@ function Footer(){
             <div>
                 <h3>LINKS</h3>
                 <div>
-                    <a href="#">Home</a>
+                    <Link to="/home">Home</Link>
                 </div>
                 <div>
-                    <a href="#">About</a>
+                    <Link to="/about">About</Link>
+
                 </div>
                 <div>
-                    <a href="#">Login</a>
+                    <Link to="/login">Login</Link>
+
                 </div>
             </div>
 

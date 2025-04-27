@@ -32,7 +32,7 @@ function Signup({user, setUser}){
             console.log("success for signup");
             localStorage.setItem("user", JSON.stringify(result.data));
             setUser(result.data);
-            navigate(`/admin`);
+            navigate("/admin");
         })
             .catch((error) => console.log(error));
     };

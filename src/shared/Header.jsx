@@ -7,7 +7,7 @@ function Header({user, setUser}){
     const navigate = useNavigate();
     const handleLogout = (e) =>  {
 
-    }
+    
 
     const url = "https://course-project-codesquad-comics-server.onrender.com/logout";
 
@@ -30,7 +30,7 @@ function Header({user, setUser}){
         console.log(error); 
         navigate("/admin")
     });
-
+    };
 
     return(
         

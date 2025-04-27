@@ -9,9 +9,9 @@ function Update(){
 
     useEffect(() => {
 
-        const url = "https://course-project-codesquad-comics-server.onrender.com/api/books/"
+        const url = "https://course-project-codesquad-comics-server.onrender.com/api/books"
 
-        fetch( `${url}${bookId}`)
+        fetch( `${url}/${bookId}`)
             .then((response) => response.json())
             .then((result) => {
                 console.log(result);
@@ -33,9 +33,9 @@ function Update(){
 
         }
 
-        const url = "https://course-project-codesquad-comics-server.onrender.com/api/books/edit/"
+        const url = "https://course-project-codesquad-comics-server.onrender.com/api/books/edit"
 
-        fetch(`${url}${bookId}`, {
+        fetch(`${url}/${bookId}`, {
             method:"PUT",
             headers:{
                 "Content-Type":"application/json"

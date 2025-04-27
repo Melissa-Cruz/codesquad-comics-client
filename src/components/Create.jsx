@@ -45,13 +45,13 @@ function Create() {
       .then((response) => response.json())
       .then((result) => {
         console.log(result);
-        navigate(`/admin`)
+        navigate("/admin")
 
     
     })
       .catch((error) => {
         console.log(error);
-        setErrorMessage(error.message);
+        [errorMessage, setErrorMessage] = useState("");
         console.log(error.message);
       });
   };

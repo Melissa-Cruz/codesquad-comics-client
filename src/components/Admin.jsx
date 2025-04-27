@@ -21,13 +21,13 @@ function Admin() {
   }, []);
 
   const deleteUrl =
-    "https://course-project-codesquad-comics-server.onrender.com/api/books/delete/";
+    "https://course-project-codesquad-comics-server.onrender.com/api/books/delete";
   // "https://course-project-codesquad-comics-server.onrender.com/api/books/delete/${bookId}";
   const handleDeleteBook = (bookId) => {
     // console.log(JSON.str)
 
-    console.log(`${deleteUrl}${bookId}`);
-    fetch(`${deleteUrl}${bookId}`, { method: "DELETE" })
+    console.log(`${deleteUrl}/${bookId}`);
+    fetch(`${deleteUrl}/${bookId}`, { method: "DELETE" })
       .then((response) => response.json())
       .then((result) => console.log(result))
       .catch((error) => console.log(error));
@@ -55,7 +55,7 @@ function Admin() {
                 <tr key={book._id}>
                   <td>{book.title}</td>
                   <td>
-                    <button><a href="./Update">EDIT</a></button>
+                    <button><a href="./update">EDIT</a></button>
                   </td>
                   {/* do the format beloow */}
                   <td>
