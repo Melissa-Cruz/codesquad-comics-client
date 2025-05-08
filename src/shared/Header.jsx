@@ -51,7 +51,7 @@ function Header({user, setUser}){
                     <Link to="/admin">ADMIN</Link>,
                     <a href = "#" onClick={handleLogout}>LOGOUT</a>
                 ) : (
-                    <Link to="/Login">LOGIN</Link>
+                    <Link to="/login">LOGIN</Link>
                 )
                  }
             </nav>  
