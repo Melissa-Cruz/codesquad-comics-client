@@ -12,9 +12,11 @@ function Login({user, setUser}){
             username: e.target.username.value, 
             password: e.target.password.value
         }
-        const url = "https://course-project-codesquad-comics-server.onrender.com/login/local";
+        // const url = "https://course-project-codesquad-comics-server.onrender.com/login/local";
+        const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
 
-        fetch(`${url}`, {
+
+        fetch(`${API_BASE_URL}/auth/login/local`, {
             method:"POST", 
             headers: {
                 "Content-Type":"application/json"

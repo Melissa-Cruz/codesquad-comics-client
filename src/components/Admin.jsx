@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import booksData from "../data/books";
 
 function Admin() {
+  const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
   const [books, setBooks] = useState([]);
   {
     /* // Create a useEffect function  */
   }
 
-  const url =
-    "https://course-project-codesquad-comics-server.onrender.com/api/books";
+  // const url ="https://course-project-codesquad-comics-server.onrender.com/api/books";
 
   useEffect(() => {
-    fetch(`${url}`)
+    // fetch(`${url}`)
+    fetch(`${API_BASE_URL}/api/books`)
       .then((response) => response.json())
       .then((result) => {
         console.log(result);

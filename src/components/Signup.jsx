@@ -17,9 +17,10 @@ function Signup({user, setUser}){
 
         }
 
-        const url = "https://course-project-codesquad-comics-server.onrender.com/signup";
+              //const url = "https://course-project-codesquad-comics-server.onrender.com/signup";
+              const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
 
-        fetch(`${url}`,{
+        fetch(`${API_BASE_URL}/auth/register`,{
             method:"POST",
             headers: {
                 "Content-Type":"application/json"

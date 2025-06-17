@@ -3,16 +3,17 @@ import booksData from "../data/books";
 
 function Home() {
   // Create a state using useState to hold data for "books".
+  const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
 
   //books belong to the Home component as a state
   const [books, setBooks] = useState([]);
 
-  const url =
-    "https://course-project-codesquad-comics-server.onrender.com/api/books";
+  // const url =
+    // "https://course-project-codesquad-comics-server.onrender.com/api/books";
   //useEffect gets the data outside of react
   useEffect(() => {
     // create a callback function that will send a GET method using fetch to
-    fetch(`${url}`)
+    fetch(`${API_BASE_URL}/api/books`)
       .then((response) => response.json())
       .then((result) => {
         console.log(result);

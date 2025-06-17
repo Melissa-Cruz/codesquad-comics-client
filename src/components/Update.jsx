@@ -33,9 +33,10 @@ function Update(){
 
         }
 
-        const url = "https://course-project-codesquad-comics-server.onrender.com/api/books/edit/"
+        // const url = "https://course-project-codesquad-comics-server.onrender.com/api/books/edit/"
+        const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
 
-        fetch(`${url}${bookId}`, {
+        fetch(`${API_BASE_URL}/api/books/edit/${bookId}`, {
             method:"PUT",
             headers:{
                 "Content-Type":"application/json"

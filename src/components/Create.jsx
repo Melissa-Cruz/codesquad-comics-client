@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
+  const API_BASE_URL= import.meta.env.VITE_API_BASE_URL;
   const navigate = useNavigate();
 
   // Build an arrow function to handle the create form submissions. There will be one parameter of "event" (or "e" for short).
@@ -9,8 +10,8 @@ function Create() {
     e.preventDefault();
     console.log("submitted");
 
-    const url =
-      "https://course-project-codesquad-comics-server.onrender.com/api/books/create";
+    // const url =
+    //   "https://course-project-codesquad-comics-server.onrender.com/api/books/create";
 
     console.log("this handleFormSubmission ran");
     const body = {
@@ -35,7 +36,7 @@ function Create() {
     console.log(e.target.rating.value);
     console.log(e.target.synopsis.value);
 
-    fetch(`${url}`, {
+    fetch(`${API_BASE_URL}/api/books/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
