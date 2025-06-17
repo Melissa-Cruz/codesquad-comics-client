@@ -1,10 +1,638 @@
-#root {
+/* ------------------------------From course project---------------------------------------- */
+:root {
+  --teal: #006B6B;
+  --light_teal: #009E9E;
+  --yellow: #FCCF14;
+  --blue: #063C5E;
+  --grey: #C2C2C2;
+  --white: #FFFFFF; 
+  --black: #000000;
+   }
+  
+  *{
+      font-size: 1.4rem;
+      box-sizing: border-box;
+  
+  }
+   
+      
+  
+    /****  */
+  header, footer, .comic-book-container-title {
+      font-family: "Fredericka the Great", serif;
+      font-weight: 400;
+      font-style: normal;
+        } 
+        
+  
+  
+  
+  body {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0;
+      overflow-x: hidden; 
+      background-image:linear-gradient(var(--white), var(--teal)) ;
+      font-family: "Open Sans", serif;
+  
+  }
+  
+  header a{
+      color: var(--white);
+      font-weight: bold;
+      
+   
+      
+  }
+  /*  */
+  header a:hover, footer a:hover{
+      color:var(--yellow);
+      font-weight: bold;
+  }
+  
+  /* if i make this blue then it blends in with the background */
+  header a:active, footer a:active{
+      color:var(--light_teal);
+      font-weight: bold;
+  }
+  
+  
+  
+  header {
+      background-color:var(--blue);
+      color: var(--white);
+  }
+  
+  nav {
+      padding: 30px 20px 10px ;
+      display:flexbox;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* text-decoration: none; */
+      /* white-space: pre; */
+  }
+  
+  nav a {
+      text-decoration: none;
+      padding: 70px;
+  
+  }
+  
+  .nav-comic-icon{
+      width:300px;
+  
+  }
+  
+  /* main container for all the css */
+  .div-white-container{
+      display: flex;
+      flex-direction: column;
+      /* width:600px; */
+      text-wrap: wrap;
+      background-color: var(--white);
+      /* margin: 50px 25px 50px 25px; */
+      border-style: solid;
+      border-width: 3px;
+      border-color: var(--blue);
+      padding: 20px;
+  
+  
+      /* flex-wrap: wrap; */
+      /* text-wrap: wrap; */
+  
+      /* margin-right: auto;
+      margin-left: auto; */
+      margin-top: 5%;
+      margin-bottom: 5%;
+      margin-right: 10%;
+      margin-left: 10%;
+      
+  }
+  
+  
+  /* .div-white-container div { */
+      /* width: 500px;  */
+      /* text-wrap: wrap; */
+      /* display: flex; */
+  
+  /* } */
+  
+  .div-white-container h1 {
+      text-align: center;
+      color: var(--blue);
+  }
+  
+  .div-white-container h2 {
+      text-align: center;
+      color: var(--blue);
+  }
+  
+  .div-white-container button {
+      background-color: var(--yellow);
+  }
+  
+  
+  /* no idea why this does not work */
+  /* .div-white-container form {
+      align-self: center;
+      justify-self: center;
+  } */
+  
+  .div-form-container-center {
+      width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-left: auto;
+      align-content: center;
+      /* al */
+  }
+  
+  .div-form-container-center form {
+     /* align-items: center; */
+     /* text-align: right; */
+     /* width: 98; */
+     padding-bottom: 5px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     text-align:left ;
+     /* justify-items: left; */
+     /* align-content: center; */
+     margin-left: 20%;
+     /* padding-left: 5%; */
+     /* padding-right: 5%; */
+  
+  }
+  
+  /* technically part of the right answer but I don't know how to get the input */
+  form input, form select, form textarea{
+      /* box-sizing: border-box; */
+      display: inline-block;
+      width: 160px;
+  
+      /* margin: 0 auto 32px; */
+  }
+  
+  /* .div-form-container-center form label {
+      align-items: left;
+  } */
+  
+  
+  /* .div-form-container-center input {
+      flex-shrink: inherit;
+   } */
+  
+  /* .div-white-container-form-button  {  */
+      /* width:6px; */
+      /* margin-right: auto; */
+      /* margin-left: auto; */
+  /* } */
+  
+  .div-white-container-form-button input { 
+      background-color: var(--yellow);
+      text-align: left;
+  
+  }
+  
+  .div-update-form-container-center {
+      width: 325px;
+      /* display: flex; */
+      margin-right: auto;
+      margin-left: auto;
+  }
+  
+  .div-update-form-container-center form {
+      align-items: center;
+      text-align: right;
+      padding-bottom: 5px;
+   
+   }
+  
+  
+  figure{
+      padding:0px;
+  }
+  
+  /* .bullet-less-list {
+      list-style: none;
+      /* text-align: left; */
+  /* } */ 
+  
+  .comic-book-cover {
+      width: 200px;
+      padding: 0px;
+  
+  }
+  
+  .multiline {
+      white-space:pre-line;
+  }
+  
+  
+  
+  address{
+      font-style: normal;
+  }
+  
+  
+  
+  footer { 
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      align-content: space-evenly;
+  
+      /* align-items: center; */
+      /* justify-content: center; */
+      /* align-content: sp; */
+  
+  
+      background-color: var(--blue);
+      color: var(--white);
+      border-top-color:var(--yellow);
+      border-top-width: 5px;
+      border-style: solid;
+      padding-left: 20px;
+  
+  }
+  
+  footer div {
+      width: 300px;
+  
+  }
+  
+  footer div a {
+      text-decoration: none;
+  }
+  
+  
+  footer h3{
+      color: var(--yellow);
+  }
+  
+  
+  /* if more than one image comes into the footer this will need to be changed  */
+  footer img {
+      width:150px
+  }
+  
+  footer a{
+      color: white;
+  }
+  
+  /* add space and center around the button element on the admin page */
+  .div-button-container {
+      width: 129px;
+      /* display: flex; */
+      /* align-items: flex-start; */
+      /* width: 150px; */
+      margin-right: auto;
+      margin-left: auto;
+  
+  }
+  
+  .div-button-container button {
+      align-self: center;
+      background-color: var(--yellow);
+  
+  }
+  
+  .button-space-formatting{
+      margin-bottom: 20px;
+  
+      
+      /* display: relative;
+      justify-self: center;
+      justify-content: center; */
+  
+  }
+  
+  /*comic book table formatting on admin page */
+  
+  .comic-table-formatting {
+      margin-bottom: 20px;
+      border-style: solid;
+      border-color: var(--black);
+      border-collapse: collapse;
+   
+  }
+  
+  .comic-table-formatting th{
+      background-color:var(--grey) ;
+      border-style: solid;
+      padding: 10px;
+  
+  }
+  
+  .comic-table-formatting td {
+      /* border-style: solid; */
+      /* margin: 0px 0px 0px 0px; */
+      border-color: var(--black);
+      border-style: solid;
+      padding: 5px 5px 5px 15px ;
+  }
+  
+  .comic-table-formatting button {
+      padding-left: 20px;
+      padding-right: 20px;
+  
+  
+  }
+  .comic-table-formatting tr:nth-child(even){
+      background-color:var(--grey);
+  
+  
+  }
+  
+  .comic-table-formatting tr td:nth-child(even) button {
+      background-color: var(--blue);
+      color:white;
+  
+      /* border-style: hidden; */
+  
+  }
+  
+  .comic-table-formatting tr td:nth-child(odd) button {
+      background-color:var(--yellow);
+      /* border-style: hidden; */
+  
+  }
+  
+  /* add space to the bottom of the synopsis input section on the create page */
+  .synopsis-input-formatting{
+      margin-bottom: 30px;
+  }
+  
+  /* make all the items on the index list adjust left */
+  .comic-book-collection-list {
+      margin-left: -34px;
+      display: flex;
+      flex-direction: column;  
+  }
+  
+  .comic-book-collection-list a:hover{
+      color:var(--light_teal);
+      font-weight: bold;
+  }
+  
+  .comic-book-collection-list a:active{
+      color:var(--blue);
+      font-weight: bold;
+      background-color:var(--yellow);
+  }
+  
+  /*  links for each book should be the site's blue color both when inactive and after the link has been visited. */
+  .comic-book-collection-list a {
+      color: var(--blue);
+  
+  }
+  
+  .comic-book-card-container {
+      /* display:flex; */
+     /*  flex-direction: column; */
+      /* position: relative; */
+         
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;    
+      width:50%;
+      /* height:50% */
+      
+  
+  
+      background-color: var(--blue);
+      border-radius: 20px 20px 20px 20px;
+      color:var(--yellow);
+      border-color:var(--yellow);
+      border-style: solid;
+  
+      margin-right: auto;
+      margin-left: auto;
+      /* margin-left:30px; */
+      /* margin-right:30px */
+      margin-top: 20px;
+      margin-bottom: 50px;
+  
+      padding-top: 10px;
+  
+  
+  }
+  
+  .comic-book-cover-card {
+      /* background-color: #063C5E; */
+      border-radius: 20px 20px 20px 20px;
+      /* color:#FCCF14; */
+      border-color:var(--white);
+      border-style: solid;
+      margin: 10%;
+      /* padding: 100px; */
+      /* margin-top: 10px; */
+      /* margin-bottom: 10px;  */
+      width:80%;
+  
+  
+  }
+  
+  
+  
+  .comic-book-card-details-container{
+      /* width:400px; */
+      border-bottom-left-radius:  20%;
+      border-bottom-right-radius: 20%;
+      border-color: var(--yellow);
+      border-style: solid;
+      width:100%;
+  
+  
+      background-color: var(--white);
+      color: var(--black);
+      white-space:pre-line;
+      /*padding: top, right, bottom, left */
+      padding: 0px 30px 20px 35px;
+  
+  
+  }
+  
+  .comic-book-card-factors {
+      font-weight: bold;
+      text-decoration: underline;
+  
+  }
+  .comic-title {
+      font-style: italic;
+  }
+  
+  .comic-book-container-title{
+      text-align: center;
+      margin-top: 5%;
+  
+  
+     }
+  
+  
+  
+     .hamburger-container{
+      visibility: collapse;
+      
+  }
+  
+  /* make the font smaller for everything not desktop */
+  /* @media screen and (min-width:1023px) {
+      *{
+          font-size: 1rem;
+  
+      }
+      
+  } */
+  /* at media queries - mobile  and tablet sizes... in the directions the way this is written does not make sense to me because tablets are between 768px and 1023px*/
+  @media screen and (min-width:320px) and (max-width:768px) {
+  
+      header{
+          display: flex;
+          /* display: block; */
+          flex-direction: row;
+          flex-flow: row;
+      }
+  
+      .navbar-container{
+          visibility: collapse;
+      }
+  
+      .hamburger-container{
+          position: fixed;
+          top:0;
+          right:0;
+          visibility: visible;
+          
+      }
+  
+  }
+  
+  @media screen and (max-width:767px) {
+      footer{
+          flex-direction: column;
+      }
+  
+      .admin-table-container{
+          overflow-x: auto;
+      }
+  }
+  
+  @media screen and (min-width:1024px) {
+  
+      .comic-book-collection-list{
+          margin-left: auto;
+          /* text-wrap: row; */
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+      .comic-book-card-container {
+          /* display:flex; */
+         /*  flex-direction: column; */
+          /* position: relative; */
+             
+          display:flex;
+          flex-direction: row;
+          flex-flow: row;
+          align-items: stretch;
+          /* flex-wrap: wrap; */
+          
+          /* flex-shrink: ; */
+          /* align-items: center; */
+          /* justify-content: center; */
+          /* flex-wrap: wrap;     */
+          width:80%;
+          /* height:30%; */
+          /* height: auto; */
+          /* margin: 20%; */
+          height:60%;
+      
+      
+          background-color: var(--blue);
+          border-radius: 20px 20px 20px 20px;
+          color:var(--yellow);
+          border-color:var(--yellow);
+          border-style: solid;
+      
+          /* margin-right: auto; */
+          /* margin-left: auto; */
+          /* margin-left:30px; */
+          /* margin-right:30px */
+          /* margin-top: 20px; */
+          /* margin-bottom: 50px; */
+      
+          /* padding-top: 10px; */
+      
+      
+      }
+  
+      .comic-book-cover-container{ 
+          display:block;
+      }
+   
+  
+      .comic-book-cover-card {
+          /* background-color: #063C5E; */
+          border-radius: 20px 20px 20px 20px;
+          /* color:#FCCF14; */
+          border-color:var(--white);
+          border-style: solid;
+          /* margin: 10%; */
+          /* padding: 100px; */
+          /* margin-top: 10px; */
+          /* margin-bottom: 10px;  */
+          /* width:20%; */
+      
+      
+      }
+      .comic-book-card-details-container{
+          display: block;
+          /* width:400px; */
+  
+          border-radius: 0px 20px 20px 00px;
+          border-color: var(--yellow);
+          border-style: solid;
+          /* width:80%;
+       */
+          padding: 0% 5% 0% 5%;
+          /* padding:0%; */
+          /* margin:0%; */
+          /* margin-left: 10%; */
+          /* padding: 0%; */
+          background-color: var(--white);
+          color: var(--black);
+          white-space:pre-line;
+  
+          /*padding: top, right, bottom, left */
+          /* padding: 20px 30px 20px 35px; */
+          /* flex-direction:row ;
+       */
+      
+      }
+      
+  
+  
+  }
+      
+  
+
+
+
+
+
+
+/* ---------------------------------Original Template CSS  Below--------------------------------------- */
+ /* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
+} */
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +667,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
