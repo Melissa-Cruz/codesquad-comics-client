@@ -55,6 +55,7 @@ function Admin() {
               {books.map((book) => (
                 <tr key={book._id}>
                   <td>{book.title}</td>
+    
                   <td>
                     <button><a href="./Update">EDIT</a></button>
                   </td>
@@ -67,67 +68,7 @@ function Admin() {
                 </tr>
               ))}
 
-              {/* <tr>
-                                    <td>Batman: The Dark Knight Returns</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Black Panther: A Nation Under Our Feet Book I</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Fun Home: A Family Tragicomic</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Hunter X Hunter Vol. I</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Lumberjanes Vol. I</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>March: Book One</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>One Piece, Vol. I: Romance Dawn</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Parable of the Sower</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Queer: A Graphic History</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>The Walking Dead, Vol.1: Days</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Wake: The Hidden History of Women-Led Slave Revolts</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Watchmen</td>
-                                    <td><button>EDIT</button></td>
-                                    <td><button>DELETE</button></td>
-                                </tr> */}
-            </tbody>
+              </tbody>
           </table>
         </div>
       </div>
