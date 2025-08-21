@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import booksData from "../data/books";
+// import booksData from "../data/books";
 
 function Home() {
   // Create a state using useState to hold data for "books".

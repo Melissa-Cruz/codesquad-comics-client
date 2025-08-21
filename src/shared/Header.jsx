@@ -9,7 +9,8 @@ function Header({user, setUser}){
 
     }
 
-    const url = "https://course-project-codesquad-comics-server.onrender.com/logout";
+    // const url = "https://course-project-codesquad-comics-server.onrender.com/logout";
+    const url = "https://course-project-codesquad-comics-server.onrender.com";
 
     fetch(`${url}`,{
         method:"POST",
