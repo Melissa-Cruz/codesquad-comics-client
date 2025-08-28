@@ -10,7 +10,7 @@ This project has the front-end code for the project. The goal of the project is 
 
 The client side is deployed with Netlify and the server side with Render. 
 
-## Future Items 
+### Future Tasks 
  - adjusting the sizing
  - tweaking the route mappings so the landing page is  the home page
  - surfacing all the comics
