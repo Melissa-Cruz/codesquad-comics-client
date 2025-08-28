@@ -6,7 +6,7 @@
 
 <!-- Insert a project screenshot here -->
 
-This project has the front-end code for the project. The goal of the project is to implement a CRUD app  where the  user can create/add a new comic to the collection, read and view the details of the comic, update the comic information and delete. This project was part of the coursework and is still a work in progress. 
+This project has the front-end code for the CodeSquad Comics project. The goal of the project is to implement a CRUD app  where the  user can create/add a new comic to the collection, read and view the details of the comic, update the comic information and delete. This project was part of the coursework and is still a work in progress. 
 
 The client side is deployed with Netlify and the server side with Render. 
 
